@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Todo App</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">Todo App</a>
+        </div>
+        <div class="navbar-right">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <span class="welcome-text">Hi, Welcome Back, <span id="username">Prashanth</span></span>
+            <div class="user-icon" id="user-dropdown">
+                <i class="fas fa-user-circle"></i>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="profile.html" class="dropdown-item" id="profile-btn">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a href="#" class="dropdown-item" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Log out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2 class="profile-title">Profile Details</h2>
+                <div id="profile-actions">
+                    <button id="edit-btn" class="edit-button">
+                        Edit Details
+                    </button>
+                    <div id="action-buttons" class="hidden">
+                        <button id="cancel-btn" class="cancel-button">
+                            Cancel
+                        </button>
+                        <button id="save-btn" class="save-button">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="view-mode">
+                        <span id="fullName-view">John Doe</span>
+                    </div>
+                    <div class="edit-mode hidden">
+                        <input type="text" id="fullName" name="fullName" required>
+                        <p class="error-message" id="fullName-error"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <div class="view-mode">
+                        <span id="email-view">john@example.com</span>
+                    </div>
+                    <p class="email-note">Email address cannot be changed</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="view-mode">
+                        <span>••••••••</span>
+                    </div>
+                    <div class="edit-mode hidden">
+                        <input type="password" id="password" name="password" placeholder="Enter new password">
+                        <p class="hint">Leave blank to keep current password</p>
+                        <p class="error-message" id="password-error"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="assets/js/profile.js"></script>
+</body>
+</html>
