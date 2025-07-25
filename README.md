@@ -35,8 +35,8 @@ A modern, responsive Todo application with user authentication and task manageme
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/todo-app.git
-   cd todo-app
+   git clone https://github.com/jeya-prashanth/Task-Todo
+   cd Task-Todo
    ```
 
 2. Open `index.html` in your web browser:
@@ -50,26 +50,6 @@ A modern, responsive Todo application with user authentication and task manageme
    # For Linux
    xdg-open frontend/index.html
    ```
-
-## Project Structure
-
-```
-frontend/
-├── assets/
-│   ├── css/           # Stylesheets
-│   └── js/            # JavaScript files
-├── auth/              # Authentication pages
-├── dashboard.html     # Main application
-├── profile.html       # User profile
-└── index.html         # Landing page
-```
-
-## How It Works
-
-The application uses the browser's localStorage to persist data, including:
-- User authentication state
-- User profile information
-- Task data
 
 ### Data Structure
 
@@ -94,25 +74,7 @@ The application uses the browser's localStorage to persist data, including:
     updatedAt: 'ISO date string'
   }
   ```
-
-## Development
-
-To modify or extend the application:
-
-1. Edit the relevant HTML, CSS, or JavaScript files in the `frontend` directory
-2. Test your changes by opening the corresponding HTML file in a web browser
-3. The application will automatically use localStorage for data persistence
-
-## Browser Support
-
-The application is tested and works on:
-- Google Chrome (latest)
-- Mozilla Firefox (latest)
-- Safari (latest)
-- Microsoft Edge (latest)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-This project is open source and available under the [MIT License](LICENSE).
+- **Run**
+ ```bash
+ docker-compose up --build
+ ```
